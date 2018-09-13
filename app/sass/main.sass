@@ -34,7 +34,8 @@ body
 
 .text-center
 	text-align: center
-
+.accent-text
+	color: $accent
 b, strong
 	font-weight: bold
 
@@ -59,6 +60,8 @@ li
 	background-color: $light
 .section--darkBg
 	background-color: $darkSection
+.section--darkestBg
+	background-color: $dark-accent
 .overlay
 	position: relative
 	&:after
@@ -74,6 +77,7 @@ li
 	font-family: $headers-font
 	font-weight: 600
 	color: $header-text
+	margin-bottom: 30px
 .h2
 	font-size: 30px
 .h3
@@ -95,7 +99,8 @@ li
 		color: $light
 		background: $dark-accent
 		background: linear-gradient(to bottom, $accent, $dark-accent)
-
+	.promo
+		margin: 30px 0
 //////////////HEADER START/////////
 
 .header
@@ -273,11 +278,35 @@ li
 		&:after
 			background-color: $accent
 
-
-
-
-
-
 //////////////ABOUT END/////////
+
+//////////////FEATURED START/////////
+#featured
+	padding-bottom: 0
+.featured__bottom
+	display: flex
+	justify-content: center
+	margin-top: 60px
+.featured__item
+	img
+		&:hover
+			transform: scale(1.4)
+			box-shadow: 0px 0px 30px $dotsColor
+
+
+//////////////FEATURED END/////////
+
+//////////////PURCHASE START/////////
+
+.purchase
+	.h2
+		color: $light
+		margin-bottom: 0
+	p
+		color: $brown
+		font-size: 18px
+		font-family: $headers-font
+
+//////////////PURCHASE END/////////
 
 @import "media" // Always at the end
