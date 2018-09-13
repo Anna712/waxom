@@ -53,7 +53,12 @@ li
 	max-width: 1235px
 	position: relative
 	z-index: 1
-
+.section
+	padding: 60px 0
+.section--lightBg
+	background-color: $light
+.section--darkBg
+	background-color: $darkSection
 .overlay
 	position: relative
 	&:after
@@ -68,6 +73,7 @@ li
 .h2,.h3
 	font-family: $headers-font
 	font-weight: 600
+	color: $header-text
 .h2
 	font-size: 30px
 .h3
@@ -232,8 +238,46 @@ li
 	max-width: 600px
 	margin: 0 70px
 			
-
-
 //////////////HEADER END/////////
+
+//////////////ABOUT START/////////
+
+.about__item
+	position: relative
+	padding-bottom: 35px
+	margin-bottom: 20px
+	.h3
+		white-space: nowrap
+		transition: all .3s
+	[class^=flaticon-]
+		&:before
+			margin-left: 0
+			font-size: 50px
+			color: $header-text
+			transition: all .3s
+	&:after
+		content: ""
+		display: block
+		width: 70px
+		height: 4px
+		background-color: $text
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		transition: all .3s
+	&:hover
+		[class^=flaticon-]:before,
+		.h3
+			color: $accent
+		&:after
+			background-color: $accent
+
+
+
+
+
+
+//////////////ABOUT END/////////
 
 @import "media" // Always at the end
