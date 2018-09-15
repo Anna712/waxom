@@ -179,8 +179,8 @@ li
 				transform: rotate(-45deg)
 
 /*sandwich button end*/
-.next,
-.prev
+.header-next,
+.header-prev
 	position: absolute
 	transform: translateY(-50%)
 	cursor: pointer
@@ -190,11 +190,11 @@ li
 			margin-left: 0
 		&:hover
 			color: $accent
-.next
+.header-next
 	right: 0
 	top: 50%
 	
-.prev
+.header-prev
 	left: 0
 	top: 50%
 .light-dots
@@ -330,6 +330,28 @@ li
 				background-color: $accent
 				color: $light
 				border-color: $accent
+.item
+	&:hover
+		.item__bottom
+			background-color: $dark-accent
+		.item__title
+			color: $light
+		.item__descr
+			color: $accent
+.item__title
+	display: block
+	font-size: 20px
+	color: $accent
+	font-family: $headers-font
+	font-weight: 500
+.item__descr
+	font-size: 14px
+	font-weight: 200
+	color: $text
+.item__bottom
+	background-color: $darkSection
+	padding: 25px
+
 .project
 	margin-bottom: 20px
 	[class^=flaticon-]:before
@@ -340,28 +362,15 @@ li
 			justify-content: center
 			align-items: center
 		.project__bottom
-			background-color: $accent
 			&:before
-				border-color: transparent transparent $accent transparent
-		.project__title
-			color: $light
-		.project__descr
-.project__title
-	display: block
-	font-size: 20px
-	color: $accent
-	font-family: $headers-font
-	font-weight: 500
+				border-color: transparent transparent $dark-accent transparent
+		
 .project__descr
-	font-size: 14px
-	font-weight: 200
-	color: $text
 	&:hover
 		text-decoration: underline
 		color: $light
+
 .project__bottom
-	background-color: $darkSection
-	padding: 25px
 	position: relative
 	&:before
 		content: ""
@@ -386,7 +395,7 @@ li
 		margin-left: 30px
 
 
-.project__top--hover
+.item__top--hover
 	display: none
 	position: absolute
 	top: 0
@@ -481,5 +490,78 @@ li
 
 
 //////////////	COUNTERS  END/////////
+
+//////////////		BLOG  START/////////
+#blog
+	padding-bottom: 50px
+.post-slider
+	margin-top: 30px
+.post
+	margin-right: 30px
+	&:hover
+		.item__top--hover
+			display: block
+		.day
+			background-color: $accent
+		.month
+			background-color: $brown
+	&__top
+		position: relative
+.calendar
+	position: absolute
+	z-index: 10
+	top: 20px
+	left: 20px
+	color: $light
+	line-height: 1
+.day
+	font-size: 24px
+	padding: 10px
+	background-color: $dark-accent
+.month
+	font-size: 12px
+	padding: 10px
+	background-color: #252525
+.more
+	color: $accent
+	transition: all .3s
+	&:hover
+		color: $light
+		&:after
+			border-color: transparent transparent transparent $light
+	&:after
+		content: ""
+		display: inline-block
+		margin-left: 10px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width:  5px 0 5px 10px
+		border-color: transparent transparent transparent $accent
+.post-slider__arrows
+	margin-top: 40px
+.post-prev,
+.post-next
+	display: inline-block
+	i
+		font-weight: bold 
+		border: 1px solid $text
+		border-radius: 50%
+		&:before
+			margin-left: 0
+			font-size: 12px
+	&:hover,
+		i
+			border-color: $accent
+			&:before
+				color: $accent
+.post-prev
+	margin-right: 15px
+	i
+		padding: 4px 6px 6px 4px
+.post-next
+	i
+		padding: 4px 4px 6px 6px
+//////////////		BLOG  END/////////
 
 @import "media" // Always at the end

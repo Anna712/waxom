@@ -33,8 +33,8 @@ $(function() {
   		dots: true,
   		appendDots:$('.dots-wrapper'),
   		dotsClass: 'slick-dots light-dots',
-  		nextArrow: $('.next'),
-		prevArrow: $('.prev'),
+  		nextArrow: $('.header-next'),
+		prevArrow: $('.header-prev'),
 		responsive: [
     {
       breakpoint: 768,
@@ -44,5 +44,28 @@ $(function() {
     }
     ],
 	});
+
+	$('.post-slider').slick({
+		infinite: true,
+		autoplay: true,
+		speed: 1000,
+  		slidesToShow: 3,
+  		nextArrow: $('.post-next'),
+		prevArrow: $('.post-prev'),
+		responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+    ]
+  	});
+ 
 
 });
