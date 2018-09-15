@@ -9,6 +9,20 @@ $(function() {
 		});
 	});
 
+	// $('.portfolio-categories__item a').click(function() {
+	// 	$('.portfolio-categories__item').removeClass('selected');
+	// 	$(this).parent('li').addClass('selected');
+	
+	// thisItem = $(this).data('category');
+	// if(thisItem != 'all') {
+	// 	$('.gallery-item[data-category='+thisItem+']').slideDown(1000);
+	// 	$('.gallery-item[data-category!='+thisItem+']').slideUp(1000);
+	// } else {
+	// 	$('.gallery-item').slideDown(1000);
+	// }
+	// 	return false;
+	// });
+
 	//////sliders//////
 
 	$('.header-slider__inner').slick({

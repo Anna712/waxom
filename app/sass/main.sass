@@ -93,7 +93,7 @@ li
 	white-space: nowrap
 	padding: 20px 45px 17px
 	border-radius: 5px
-	border-bottom: 3px solid $dark-accent
+	border-bottom: 3px solid $brown
 	transition: all .3s ease
 	&:hover
 		color: $light
@@ -308,5 +308,94 @@ li
 		font-family: $headers-font
 
 //////////////PURCHASE END/////////
+
+//////////////PORTFOLIO START/////////
+
+.portfolio-list
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	margin-top: 30px
+	&__item
+		margin-right: 8px
+		margin-bottom: 30px
+		&:last-child
+			margin-right: 0
+		a
+			padding: 10px 15px
+			border: 1px solid $text
+			color: $text
+			&:hover,
+			&.active
+				background-color: $accent
+				color: $light
+				border-color: $accent
+.project
+	margin-bottom: 20px
+	[class^=flaticon-]:before
+		margin-left: 0
+	&:hover
+		.project__top--hover
+			display: flex
+			justify-content: center
+			align-items: center
+		.project__bottom
+			background-color: $accent
+			&:before
+				border-color: transparent transparent $accent transparent
+		.project__title
+			color: $light
+		.project__descr
+.project__title
+	display: block
+	font-size: 20px
+	color: $accent
+	font-family: $headers-font
+	font-weight: 500
+.project__descr
+	font-size: 14px
+	font-weight: 200
+	color: $text
+	&:hover
+		text-decoration: underline
+		color: $light
+.project__bottom
+	background-color: $darkSection
+	padding: 25px
+	position: relative
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		left: 20px
+		top: -8px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 14px 8px 14px
+		border-color: transparent transparent $darkSection transparent
+.project__top
+	position: relative
+	a
+		position: relative
+		z-index: 10
+		color: $light
+		&:hover
+			color: $accent
+	a+a
+		margin-left: 30px
+
+
+.project__top--hover
+	display: none
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+
+
+//////////////PORTFOLIO END/////////
 
 @import "media" // Always at the end
