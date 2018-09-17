@@ -68,4 +68,31 @@ $(function() {
   	});
  
 
+	$('.clients-slider').slick({
+		infinite: true,
+		autoplay: true,
+		speed: 1000,
+  		slidesToShow: 4,
+  		arrows: false,
+  		responsive: [{
+	  		breakpoint: 992,
+		      settings: {
+		        slidesToShow: 3,
+		      }
+		    },
+		    {
+		    breakpoint: 768,
+		      settings: {
+		        slidesToShow: 2,
+		      }
+		    },
+		    {
+		    breakpoint: 576,
+		      settings: {
+		        slidesToShow: 1,
+		      }
+		    },
+		    ]
+  	});
+
 });
