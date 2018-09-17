@@ -577,9 +577,104 @@ li
 	img
 		margin: 0 auto
 
-
-
-
 //////////////		CLIENTS  END/////////
+
+//////////////		CONTACT  START/////////
+
+#contact
+	background-color: #252525
+	font-size: 14px
+	color: $header-text
+	.h3
+		display: block
+		color: $light
+		margin-top: 15px
+	.logo
+		display: block
+		margin-bottom: 30px
+	.more
+		display: block
+		margin-top: 60px
+		margin-bottom: 30px
+		color: $light
+		transition: all .3s
+		&:after
+			border-color: transparent transparent transparent $light
+			margin-left: 20px
+		&:hover
+			color: $accent
+			&:after
+				border-color: transparent transparent transparent $accent
+.contact-item
+	padding-top: 20px
+	padding-bottom: 20px
+	position: relative
+	p
+		margin-bottom: 0
+	&__date
+		font-size: 12px
+		color: $header-text
+		transition: all .3s
+	&__content
+		color: $header-text
+		transition: all .3s
+	&:after
+		content: ""
+		display: block
+		height: 1px
+		width: 100%
+		position: absolute
+		bottom: 0
+		left: 0
+		background-color: $header-text
+	&:nth-of-type(3n+3)
+		&:after
+			display: none
+.contact-item__link
+	&:hover
+		.contact-item__date
+			color: $light
+		.contact-item__content
+			color: $accent
+.h3+.contact-item
+	padding-top: 0
+.socials
+	color: $socials
+	transition: all .3s
+	&:hover
+		color: $light
+
+.widget-item
+	margin: 4px
+
+//////////////		CONTACT  END/////////
+
+//////////////		FOOTER  START/////////
+
+.footer
+	background-color: #111111
+	font-size: 13px
+	a
+		color: $text
+		&:hover
+			color: $accent
+	.footer-data 
+		color: $light
+.footer-list
+	display: flex
+	li
+		margin-right: 10px
+		&:after
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			width: 1px
+			height: 13px
+			margin-left: 10px
+			background-color: $text
+		&:last-child
+			&:after
+				display: none
+//////////////		FOOTER  END/////////
 
 @import "media" // Always at the end
