@@ -23,8 +23,11 @@ doctype html
 	
 	body
 		include ../modules/header
+		.preloader
+			.pulse
 		block content
 		include ../modules/footer
+		.top(title="To top") ⇮
 		link(rel="stylesheet" href="css/main.min.css")
 		script(src="js/scripts.min.js")
 

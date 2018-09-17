@@ -1,5 +1,17 @@
 $(function() {
 
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > $(this).height()) {
+			$('.top').addClass('active');
+		} else {
+			$('.top').removeClass('active');
+		}
+
+	});
+	$('.top').click(function() {
+		$('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+	});
+
 	$('#nav-toggle').on('click', function() {
 		$(this).toggleClass('active');
 		$('.main-nav__list').slideToggle (300, function(){
@@ -94,5 +106,9 @@ $(function() {
 		    },
 		    ]
   	});
+
+  $(window).on('load', function() {
+  	$('.preloader').delay(1000).fadeOut('slow');
+  });
 
 });

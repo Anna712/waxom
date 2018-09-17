@@ -86,19 +86,19 @@ li
 .btn
 	display: inline-block
 	color: $light
-	background-color: $accent
+	background-color: #998675
 	font-family: $headers-font
 	font-weight: 800
 	text-transform: uppercase
 	white-space: nowrap
 	padding: 20px 45px 17px
 	border-radius: 5px
-	border-bottom: 3px solid $brown
+	border-bottom: 3px solid #736357
 	transition: all .3s ease
 	&:hover
 		color: $light
 		background: $dark-accent
-		background: linear-gradient(to bottom, $accent, $dark-accent)
+		background: linear-gradient(to bottom, $accent, #736357)
 	.promo
 		margin: 30px 0
 //////////////HEADER START/////////
@@ -265,7 +265,7 @@ li
 		display: block
 		width: 70px
 		height: 4px
-		background-color: $text
+		background-color: $darkSection
 		position: absolute
 		bottom: 0
 		left: 50%
@@ -677,4 +677,77 @@ li
 				display: none
 //////////////		FOOTER  END/////////
 
+//////////////	BUTTON	TO TOP START/////////
+
+.top
+	position: fixed
+	bottom: 25px
+	right: -100px
+	background-color: $accent
+	color: $darkSection
+	z-index: 20
+	border-radius: 50%
+	font-size: 26px
+	width: 50px
+	height: 50px
+	text-align: center
+	cursor: pointer
+	transition: all .3s ease
+	opacity: .7
+	&:hover
+		color: $light
+		background-color: $dark-accent
+		opacity: 1
+	&.active
+		right: 25px
+
+//////////////	BUTTON	TO TOP END/////////
+
+///////////PRELOADER START ////////////
+
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+.preloader
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	z-index: 20
+	background-color: $brown
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		margin-left: -40px
+		margin-top: -40px
+		&:before, 
+		&:after
+			content: ""
+			border: 5px solid $accent
+			width: 80px
+			height: 80px
+			border-radius: 50%
+			position: absolute
+		&:before
+			animation: pulse-outer .8s ease-in infinite
+		&:after
+			animation: pulse-inner .8s linear infinite
+@keyframes pulse-outer
+	0%
+		@include opacity(100)	
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+@keyframes pulse-inner
+	0%
+		@include opacity(0)	
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)
+
+///////////PRELOADER END ////////////
 @import "media" // Always at the end
