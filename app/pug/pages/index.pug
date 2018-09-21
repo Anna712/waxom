@@ -50,18 +50,18 @@ block content
 					p.promo Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
 			ul.portfolio-list
 				li.portfolio-list__item
-					a(href="#").active All
+					a(href="#" data-category="All").active All
 				li.portfolio-list__item
-					a(href="#") Web Design
+					a(href="#" data-category="Design") Web Design
 				li.portfolio-list__item
-					a(href="#") Mobile App
+					a(href="#" data-category="App") Mobile App
 				li.portfolio-list__item
-					a(href="#") Illustration
+					a(href="#" data-category="Illustration") Illustration
 				li.portfolio-list__item
-					a(href="#") Photografy
+					a(href="#" data-category="Photografy") Photografy
 			.row
 				.col-12.col-sm-6.col-md-4
-					.item.project
+					.item.project(data-category="Photografy")
 						.project__top
 							img(src="img/gallery-item1.jpg", alt="gallery-item1").img-responsive.img-width
 							.item__top--hover.project__top--hover.overlay
@@ -74,7 +74,7 @@ block content
 							a(href="#").item__descr.project__descr Photography, 
 							a(href="#").item__descr.project__descr Nature
 				.col-12.col-sm-6.col-md-4
-					.item.project
+					.item.project(data-category="Design")
 						.project__top
 							img(src="img/gallery-item2.jpg", alt="gallery-item2").img-responsive.img-width
 							.item__top--hover.project__top--hover.overlay
@@ -87,7 +87,7 @@ block content
 							a(href="#").item__descr.project__descr Graphic Design, 
 							a(href="#").item__descr.project__descr Mock-Up
 				.col-12.col-sm-6.col-md-4
-					.item.project
+					.item.project(data-category="Photografy")
 						.project__top
 							img(src="img/gallery-item3.jpg", alt="gallery-item3").img-responsive.img-width
 							.item__top--hover.project__top--hover.overlay
@@ -100,7 +100,7 @@ block content
 							a(href="#").item__descr.project__descr Photography, 
 							a(href="#").item__descr.project__descr Holiday
 				.col-12.col-sm-6.col-md-4
-					.item.project
+					.item.project(data-category="Photografy")
 						.project__top
 							img(src="img/gallery-item4.jpg", alt="gallery-item4").img-responsive.img-width
 							.item__top--hover.project__top--hover.overlay
@@ -113,7 +113,7 @@ block content
 							a(href="#").item__descr.project__descr Photography, 
 							a(href="#").item__descr.project__descr Nature
 				.col-12.col-sm-6.col-md-4
-					.item.project
+					.item.project(data-category="Design")
 						.project__top
 							img(src="img/gallery-item5.jpg", alt="gallery-item5").img-responsive.img-width
 							.item__top--hover.project__top--hover.overlay
@@ -126,7 +126,7 @@ block content
 							a(href="#").item__descr.project__descr Graphic Design, 
 							a(href="#").item__descr.project__descr Mock-Up
 				.col-12.col-sm-6.col-md-4
-					.item.project
+					.item.project(data-category="Photografy")
 						.project__top
 							img(src="img/gallery-item6.jpg", alt="gallery-item6").img-responsive.img-width
 							.item__top--hover.project__top--hover.overlay
@@ -141,11 +141,6 @@ block content
 			.row.justify-content-center
 				.col-auto
 					a(href="#").btn Load More
-	section#presentation.overlay
-		img(src="img/video.jpg", alt="Waxom presentation").img-responsive
-		.presentation__data.text-center
-			h2.h2 Waxom Video Presentation
-			p Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.
 	section.mobile.section.section--lightBg
 		.container
 			.row

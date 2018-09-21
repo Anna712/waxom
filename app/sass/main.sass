@@ -8,7 +8,9 @@
 ::selection
 	background-color: $accent
 	color: #fff
-
+*
+	&:focus
+		outline: none !important
 body
 	font-size: 16px
 	min-width: 320px
@@ -99,22 +101,31 @@ li
 		color: $light
 		background: $dark-accent
 		background: linear-gradient(to bottom, $accent, #736357)
+
 	.promo
 		margin: 30px 0
 //////////////HEADER START/////////
 
-.header
+#header
 	background: #46443f url(../img/header-bg.jpg) center no-repeat
 	background-size: cover
 	color: $light
 	height: 700px
 	height: 100vh
 	overflow: hidden
-	padding-top: 50px
+	padding-top: 75px
 	.container
 		height: 100%
 		position: relative
-
+.fixed-top
+	padding: 10px 15px
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 50
+	width: 100%
+	background-color: $dark-accent
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 .main-nav__list
 	display: flex
 	li
@@ -123,9 +134,11 @@ li
 			margin-right: 0
 	a
 		color: $light
+		white-space: nowrap
 		&:hover,
 		&.active
 			color: $accent
+
 .subtitle
 	font-size: 32px
 .h1
@@ -134,51 +147,26 @@ li
 	font-weight: 800
 
 
-
-/*sandwich button begin*/
-#nav-toggle
+.close-menu
 	display: none
-	z-index: 10
-	span
-		position: absolute
-		z-index: 10
-		right: 20px
-		top: 12px
-		cursor: pointer
-		border-radius: 1px
-		height: 5px
-		width: 35px
-		background: white
-		display: block
-		transition: all 500ms ease-in-out
-		&:before
-			top: -10px
-		&:after
-			bottom: -10px
-		&:before,
-		&:after
-			cursor: pointer
-			border-radius: 1px
-			height: 5px
-			width: 35px
-			background: white
-			position: absolute
-			display: block
-			content: ''
-			transition: all 500ms ease-in-out
 	&.active
-		span
-			background-color: transparent
-			&:before,
-			&:after
-				top: 25px
-				right: 100px
-			&:before
-				transform: rotate(45deg)
-			&:after
-				transform: rotate(-45deg)
+		display: block
+		margin: 0 auto
+		color: $light
+		font-size: 30px
+		font-weight: bold
+		position: absolute
+		top: 10px
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 50
+		cursor: pointer
 
-/*sandwich button end*/
+.icon-menu
+	display: none
+	cursor: pointer
+
+
 .header-next,
 .header-prev
 	position: absolute
@@ -439,6 +427,7 @@ li
 		margin: 40px 0 70px
 .mobile-list
 	margin-left: 50px
+	margin-bottom: 50px
 .mobile-list__item
 	&:before
 		content: "\f10f"
