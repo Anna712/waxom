@@ -101,8 +101,8 @@ $(window).scroll(function() {
 });
 
 	$('.portfolio-list__item a').click(function() {
-		$('.portfolio-list__item').removeClass('active');
-		$(this).parent('li').addClass('active');
+		$('.portfolio-list__item a').removeClass('active');
+		$(this).addClass('active');
 		thisItem = $(this).data('category');
 		$('.item.project').parent().removeClass('d-block d-none');
 	if(thisItem != 'All') {
